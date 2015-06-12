@@ -24,7 +24,7 @@ $order = $data;
                         </div>
                         <div class="form-group">
                             <label for="customerTel" >Contact Téléphonique : </label>
-                            <input class="form-control" type="text" name="customerTel" value="<?= $order['contact_tel'] ?>" placeholder="<?= $order['contact_tel'] ?>" >
+                            <input class="form-control" type="tel" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" name="customerTel" value="<?= $order['contact_tel'] ?>" placeholder="<?= $order['contact_tel'] ?>" >
                         </div>
                         <div class="form-group">
                             <label for="nomRue" >rue : </label>

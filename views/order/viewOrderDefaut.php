@@ -25,18 +25,14 @@ require '/../common/viewAdminMenuBar.php';
             <th># Numéro de commande</th>
             <th>Client</th>
             <th>Date Création</th>
-            <th>Date dernière Edition</th>
             <th>Status</th>
+            <th>Dernière modification</th>
             <th>Actions</th>
             <th><a href="<?php echo MVC_PATH;?>order/addOrder">Nouvelle commande</a></th>
         </tr>
         
          <?php
-         $orders = $data;
-         
-         
-        
-         
+         $orders = $data; 
          if($orders != ""){ 
           
          foreach($orders as $order){ ?>  
@@ -45,8 +41,8 @@ require '/../common/viewAdminMenuBar.php';
                     <td><?= $order['customer_name']; ?></td>
                   
                     <td><?= $order['date_add']; ?></td>
-                    <td><?= $order['date_edit']; ?></td>
                      <td><?= $order['statut']; ?></td>
+                     <td>Il y a <?= $order['date_diff']; ?> jours <br/>  (<?= $order['date_edit']; ?>)</td>
                        <td><ul><li><a href=<?= MVC_PATH; ?>order/viewOrder/<?= $order['id_commande'];?>>Détail</a></li><li><a href=<?= MVC_PATH; ?>order/editOrder/<?= $order['id_commande'];?>>Editer commande</a></li><li><a href=<?= MVC_PATH; ?>order/deleteOrder/<?= $order['id_commande']?>>Supprimer commande</a></li></ul></td>
                     <td></td>
                 </tr>

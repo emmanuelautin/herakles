@@ -25,11 +25,11 @@ $categorys = $more;
                         </div>
                         <div class="form-group">
                             <label for="productPrice" >Prix unitaire</label>
-                            <input class="form-control" type="text" name="productPrice" value="" placeholder="Prix" >
+                            <input class="form-control" type="number" step="0.01" min="0" name="productPrice" value="" placeholder="Prix" >
                         </div>  
                         <div class="form-group">
                             <label for="productStock" >Stock</label>
-                            <input  class="form-control" type="text" name="productStock" value="" placeholder="Stock" >
+                            <input  class="form-control" type="number" min="0" name="productStock" value="" placeholder="Stock" >
                         </div>
                         <div class="form-group">
                             <label for="productCategory" >Catégorie</label>

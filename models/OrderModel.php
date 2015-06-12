@@ -203,8 +203,7 @@ class OrderModel extends Exception{
                         
                         $order['id_statut'] = $statu['name'];
                     }
-                }
-                          
+                }   
                            $commandes['commande_'.$order['id_order']]['statut'] = $order['id_statut'];
                            $commandes['commande_'.$order['id_order']]['id_commande'] = $order['id_order'];
                            $commandes['commande_'.$order['id_order']]['customer_id'] = $order['customer_id'];
@@ -212,7 +211,8 @@ class OrderModel extends Exception{
                            $commandes['commande_'.$order['id_order']]['date_add'] = $order['date_add'];
                            $commandes['commande_'.$order['id_order']]['date_edit'] = $order['date_edit'];
                            $commandes['commande_'.$order['id_order']]['products']['product'.$order['idproduct']]['id'] =  $order['idproduct'];
-                           $commandes['commande_'.$order['id_order']]['products']['product'.$order['idproduct']]['quantity'] =  $order['quantity'];      
+                           $commandes['commande_'.$order['id_order']]['products']['product'.$order['idproduct']]['quantity'] =  $order['quantity'];  
+                           $commandes['commande_'.$order['id_order']]['date_diff'] = $this->getDateDiff($order['id_order']);
                 }
                 return $commandes; 
      }
@@ -316,6 +316,33 @@ class OrderModel extends Exception{
             }
             
         }
+        
+        // méthode pour calculer le nombre de jours depuis la derniere modification de la commande. 
+        public function getDateDiff($orderId){
+            $id = (int)$orderId;
+            $bdd = $this->getBdd();
+            $req = $bdd->prepare("SELECT date_edit FROM `order` WHERE id = :id_order");
+           
+            $req->bindParam(':id_order', $id);
+            $req->execute();
+                if($req->rowCount() > 0)
+                {
+                    $dateEdit = $req->fetchAll(PDO::FETCH_ASSOC);
+                    $dateEdit = $dateEdit[0]['date_edit'];
+                    $dateEdit = preg_split('/ /',$dateEdit);
+                    $dateEdit = $dateEdit[0];
+                    $dateDiff = $bdd->prepare("SELECT DATEDIFF( DATE(NOW()), :date_edit ) as nombre_jours");
+                    $dateDiff->bindParam(':date_edit', $dateEdit);
+                    //$dateDiff->bindParam(':date_now', 'DATE(NOW())');
+                    
+                    $dateDiff->execute(); 
+                    
+                     $dateDiff = $dateDiff->fetch();
+                   return $dateDiff['nombre_jours'];
+                }
+                        
+                   
+                }
         
         
         }

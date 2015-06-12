@@ -45,7 +45,7 @@ require '/../common/viewAdminMenuBar.php'; ?>
                                 <td><?= $history['price']; ?> € HT</td>
                                 <td><?= $history['stock']; ?> </td>
                                 <td><?= $history['name_category']; ?></td>
-                                <td><input class="form-control"  type="text" name="<?= 'productId-'.$history['id'];?>" value="" /></td>
+                                <td><input class="form-control"  type="number" step="1" min="0" name="<?= 'productId-'.$history['id'];?>" value="" /></td>
                                 </tr>
                          <?php } ?>
                            

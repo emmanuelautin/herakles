@@ -81,19 +81,19 @@ require '/../common/viewAdminMenuBar.php';
                                 <?php
                                 $seen = false;
                                 if ($history['id_product'] == $fullProduct['id'] && $history['quantity'] != ""){ ?>
-                                    <td><input class="form-control"  type="text" name="fullProductQuantity_<?= $fullProduct['id']; ?>" value="<?= $history['quantity']; ?>" /></td>
+                                    <td><input class="form-control"  type="number" step="1" min="0" name="fullProductQuantity_<?= $fullProduct['id']; ?>" value="<?= $history['quantity']; ?>" /></td>
                               <?php $seen = true; break; } ?>
                                      
                         <?php } ?>
               
                            <?php if($seen == false){ ?>      
-                                    <td><input class="form-control"  type="text" name="fullProductQuantity_<?= $fullProduct['id']; ?>" value="" /></td>
+                                    <td><input class="form-control"  type="number" step="1" min="0" name="fullProductQuantity_<?= $fullProduct['id']; ?>" value="" /></td>
                         <?php } ?> 
                                     
                        
                                  
                      <?php }else{ //endif ?>
-                             <td><input class="form-control"  type="text" name="fullProductQuantity_<?= $fullProduct['id']; ?>" value="" /></td>       
+                             <td><input class="form-control"  type="number" step="1" min="0" name="fullProductQuantity_<?= $fullProduct['id']; ?>" value="" /></td>       
                      <?php }?>
                                      <?php } ?>
                                 </tr>

@@ -91,6 +91,14 @@ class Order extends Controller {
         
     }
     
+    public function getDateDiff($orderId){
+        
+        $orderModel = $this->model('OrderModel');
+        $diff = $orderModel->getDateDiff($orderId);
+        
+        var_dump($diff);
+    }
+    
     
 }
 

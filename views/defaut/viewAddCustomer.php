@@ -15,7 +15,7 @@ require '/../common/viewAdminMenuBar.php'; ?>
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="contactCustomer" >Contact : </label>
-                            <input class="form-control" type="text" name="customerMail" value="" placeholder="Email" >
+                            <input class="form-control" type="email" name="customerMail" value="" placeholder="Email" >
                         </div>
                         <div class="form-group">
                             <label for="nomCustomer" >Raison sociale : </label>
@@ -23,7 +23,7 @@ require '/../common/viewAdminMenuBar.php'; ?>
                         </div>
                         <div class="form-group">
                             <label for="customerTel" >Contact Téléphonique : </label>
-                            <input class="form-control" type="text" name="customerTel" value="" placeholder="Numéro de téléphone" >
+                            <input class="form-control" type="tel" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" name="customerTel" value="" placeholder="Numéro de téléphone" >
                         </div>
                         <div class="form-group">
                             <label for="nomRue" >rue : </label>
