@@ -120,8 +120,8 @@ $historys = $must;
 </div>
     
     <div class="row">
-        <a class="btn btn-success" href="<?= MVC_PATH; ?>order/getdevisOrder/<?= $orderInfo['id_commande'];?>">Générer un devis</a>
-        <a  class="btn btn-success" href="<?= MVC_PATH; ?>order/getfactureOrder/<?= $orderInfo['id_commande'];?>">Générer une facture</a>
+        <a class="btn btn-success" href="<?= MVC_PATH; ?>order/getDevisOrder/<?= $orderInfo['id_commande'];?>">Générer un devis</a>
+        <a  class="btn btn-success" href="<?= MVC_PATH; ?>order/getFactureOrder/<?= $orderInfo['id_commande'];?>">Générer une facture</a>
     </div>
 </div>
 

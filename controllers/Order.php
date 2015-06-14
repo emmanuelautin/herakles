@@ -99,6 +99,21 @@ class Order extends Controller {
         var_dump($diff);
     }
     
+    public function getFactureOrder($orderId){
+        
+        
+        
+    }
+    
+    
+    public function getDevisOrder($orderId){
+        
+      $this->library('pdf_invoice');
+      $orderModel = $this->model('OrderModel');
+      $orderModel->generateDevis($orderId); 
+      
+    }
+    
     
 }
 

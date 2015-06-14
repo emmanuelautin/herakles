@@ -30,6 +30,12 @@ class Controller {
            require_once ROOT. 'views/'.$view; 
     }
     
+    public function library($library)
+    {
+        require_once ROOT.('library/'.$library.'.php');
+        return new $library(); 
+    }
+    
     
 }
 
