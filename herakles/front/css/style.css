@@ -1,0 +1,324 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16 déc. 2014, 16:27:14
+    Author     : Emmanuel
+*/
+
+
+body{
+    background: #FFFFFF;
+    height:100%;
+}
+
+.form-signin{
+
+    margin:auto;
+}
+
+.spacer{
+    height: 40px;
+}
+
+.top{
+    margin-top:100px;
+}
+
+header a{
+    display: inline-block;
+    color:#FFFFFF;
+    margin-left:50%;
+}
+
+a.logo{
+    display: inline-block;
+    margin-left:0px;
+    color: #5cb85c;
+    font-weight: bold;
+    line-height: 50px;
+    padding-left:60px;
+    font-size:25px;
+       background :url(../img/logo.png) no-repeat  10px 10px ;
+}
+
+.popup{
+  width: 30%;
+margin: auto;
+position: absolute;
+top: 30%;
+left: 35%;
+padding: 10px;
+z-index: 100;
+background: #E3E3E3;
+}
+
+.container.top{
+    
+    margin-top: 120px;
+    
+}
+
+ul li{
+    
+    list-style-type : none;
+}
+
+.error{
+      color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+
+.nav.nav-pills{
+    
+}
+
+
+
+input{
+    border-radius : 0px !important;
+}
+
+input{
+    
+}
+
+input:hover{
+    
+}
+input:not([type=text]):not([type=email]):not([type=tel]):not([type=number]):not([type=password]):hover {
+ 
+    background:#89DC89;
+    border-radius: 0px;
+    -webkit-transition: background ease-in 0.5s;
+    transition: background ease-in 0.5s;
+   
+}
+
+a{
+    border-radius : 0px !important;
+    border: 0px !important;
+}
+
+a.logo:hover{
+    
+    color :#FFF;
+       -webkit-transition: color ease-in 0.5s;
+    transition: color ease-in 0.5s;
+    text-decoration: none;
+}
+#menuOrder a{
+    background :url(../img/order.png) no-repeat #5cb85c 10px ;
+    
+}
+
+#menuCustomer a{
+    background :url(../img/customer.png) no-repeat #5cb85c 10px ;
+    
+}
+
+#menuProduct a{
+    background :url(../img/product.png) no-repeat #5cb85c 10px ;
+    
+}
+
+#menuUser a{
+    background :url(../img/user.png) no-repeat #5cb85c 10px ;
+    
+}
+
+#menuUser a:hover{
+    
+    background :url(../img/user.png) no-repeat #89DC89 10px ;
+        border-radius: 0px;
+        -webkit-transition: background ease-in 0.5s;
+            transition: background ease-in 0.5s;
+}
+#menuOrder a:hover{
+    
+    background :url(../img/order.png) no-repeat #89DC89 10px ;
+        border-radius: 0px;
+        -webkit-transition: background ease-in 0.5s;
+            transition: background ease-in 0.5s;
+}
+
+#menuCustomer a:hover{
+    
+    background :url(../img/customer.png) no-repeat #89DC89 10px ;
+        border-radius: 0px;
+        -webkit-transition: background ease-in 0.5s;
+            transition: background ease-in 0.5s;
+}
+
+#menuProduct a:hover{
+    
+    background :url(../img/product.png) no-repeat #89DC89 10px ;
+        border-radius: 0px;
+        -webkit-transition: background ease-in 0.5s;
+            transition: background ease-in 0.5s;
+}
+
+
+
+
+
+.nav.nav-pills li a {
+  color: #FFF;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+  background: #5cb85c;
+  border-radius: 0px;
+  width: 200px;
+  padding-left: 35%;
+  /* height: 60px; */
+  line-height: 60px;
+}
+
+footer{
+    min-height: 300px;
+    background : #222;
+     text-align: center;
+     padding-top: 20px;
+     margin-top: 80px;
+
+}
+
+#copyright{
+    color :#FFF !important;
+    background :url(../img/copyright.png) no-repeat 30px ;
+    width: 200px;
+  margin:auto;
+  font-size: 14px;
+   
+}
+
+table a{
+text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+max-width:200px;
+min-width:200px;
+  display: block;
+
+  line-height: 40px !important;
+  color: #FFF !important;
+  text-align: center;
+  background: #5cb85c;
+  margin: 2px;
+}
+
+table a:hover{
+        background:#89DC89;
+    border-radius: 0px;
+    -webkit-transition: background ease-in 0.5s;
+    transition: background ease-in 0.5s;
+    text-decoration :none;
+    
+}
+
+.btn-success{
+      margin: 2px;
+}
+
+.table {
+    margin-top:20px;
+}
+
+.navbar{
+   box-shadow: 0 3px 2px -2px #808080; 
+}
+  
+.action-panel li{
+    display: inline-block;
+}
+
+.action-panel li a{
+    height: 60px;
+    line-height: 60px;
+    padding-top : 0px;
+    padding-bottom :0px;
+}
+
+ul{
+    padding: 0px;
+}
+
+.csv{
+
+      background: url(../img/csv.png)no-repeat 0px 11px #5cb85c;
+  padding-left: 40px !important;
+
+}
+
+.pdf{
+    background :url(../img/pdf.png) no-repeat 0px #5cb85c;
+    padding-left:40px !important;
+}
+
+.view,.edit,.delete,.logout{
+    padding-left:40px !important;
+}
+
+.add{
+    padding-left:45px !important;
+}
+
+.view{
+    background :url(../img/view.png) no-repeat 40px #5cb85c;
+}
+
+.edit{
+    background :url(../img/edit.png) no-repeat 40px #5cb85c;
+}
+
+.delete{
+    background :url(../img/delete.png) no-repeat 40px #5cb85c;
+}
+
+.add{
+     background :url(../img/add.png) no-repeat 0px 10px #5cb85c;
+}
+
+.view:hover{
+    background :url(../img/view.png) no-repeat 40px #89DC89;
+}
+.edit:hover{
+     background :url(../img/edit.png) no-repeat 40px #89DC89;
+}
+.delete:hover{
+     background :url(../img/delete.png) no-repeat 40px #89DC89;
+}
+
+.add:hover{
+     background :url(../img/add.png) no-repeat 0px #89DC89;
+}
+
+.logout{
+    background :url(../img/logout.png) no-repeat 0px;
+    height: 40px;
+    padding-left:40px;
+    line-height: 40px;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.logout:hover{
+    background :url(../img/logout.png) no-repeat 0px;
+    color:#FFF;
+    text-decoration : none; 
+}
+
+.home table td {
+      line-height: 150px !important;
+}
+
+.spec.edit, .spec.delete{
+    padding-left:60px !important;
+}
+
+.bg-danger{
+    text-align:center;
+    height: 100px;
+    line-height: 100px;
+    margin-top: 20px;
+}
